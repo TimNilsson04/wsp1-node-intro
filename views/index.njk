@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+{% block  content %}
+<nav>
+    <h2>
+        <a href="/">Home</a>
+        <a href="/views/meme.njk">Meme Page</a>
+        <a href="/views/error.njk">Error</a>
+        </h2>
+</nav>
+
+  <h1>{{message}}</h1>
+
+  <div class="column">
+    <div class="flex">
+    <img src="/images/meme.jpg" alt="">
+    <img src="/images/meme1.jpg" alt="">
+    <img src="/images/meme2.jpg" alt="">
+    <img src="/images/meme3.png" alt="">
+</div>
+</div>
+{% endblock %}
