@@ -1,0 +1,135 @@
+@use "reset";
+
+body{
+    background-color: #121212;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+h2{
+    background-color: whitesmoke;
+    margin: 0%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 8px 8px 0 rgb(200, 200, 200);
+}
+a{
+    color: black;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 1.5rem;
+}
+pre{
+    color: white;
+}
+li{
+}
+
+.background{
+    background-color: whitesmoke;
+    box-shadow: 0 8px 8px 0 rgb(200, 200, 200);
+    color: black;
+}
+.column{
+    display: grid;
+    grid-template-columns: auto ;
+    justify-content: center;
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container {
+    width: min(80ch, 100vw - 2rem);
+    margin-inline: auto;
+}
+
+.navbar {
+    background-color: lavenderblush;
+    box-shadow: 0 8px 8px 0 rgb(200, 200, 200);
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 4rem;
+
+    }
+    &__button {
+        background-color: transparent;
+
+        @media (min-width: 600px) {
+            display: none;
+        }
+    }
+
+    &__collapse {
+        @media (max-width: 599px) {
+            display: none;
+        }
+        > ul {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+        &--show {
+            display: block;
+            width: 100%;
+            > ul {
+                flex-direction: column;
+                padding: 0;
+                text-align: right;
+            }
+        }
+    }
+}
+main {
+    margin-top: 2rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-areas: 'stack';
+
+    > * {
+        grid-area: stack;
+    }
+
+    h1 {
+        color: #efefef;
+        place-self: center;
+    }
+}
+
+.filter {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1rem);
+}
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+
+

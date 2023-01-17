@@ -2,14 +2,12 @@ const express = require('express');
 const app = express();
 const port = 4200;
 const createError = require('http-errors')
-
+const nunjucks = require('nunjucks');
+const indexRouter = require('./routes/index');
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
-
-
-const nunjucks = require('nunjucks');
 
 nunjucks.configure('views', {
     autoescape: true,
@@ -19,7 +17,7 @@ nunjucks.configure('views', {
 
 app.use(express.static('public'))
 
-const indexRouter = require('./routes/index');
+
 
 app.use('/', indexRouter);
 

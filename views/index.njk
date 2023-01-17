@@ -1,12 +1,20 @@
 {% extends "layout.njk" %}
 {% block  content %}
-<nav>
-    <h2>
-        <a href="/">Home</a>
-        <a href="/views/meme.njk">Meme Page</a>
-        <a href="/views/error.njk">Error</a>
-        </h2>
+<nav class="navbar">
+  <div class="navbar__inner container">
+      <a href="/" class="logo">Home</a>
+      <button class="navbar__button" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M3 18v-2h18v2Zm0-5v-2h18v2Zm0-5V6h18v2Z"/></svg>
+      </button>
+      <div class="navbar__collapse">
+          <ul class="menu">
+              <li><a href="/views/meme.njk">MemePage</a></li>
+              <li><a href="/views/error.njk">Error</a></li>
+          </ul>
+      </div>
+  </div>
 </nav>
+
 
   <h1>{{message}}</h1>
 
@@ -18,4 +26,6 @@
     <img src="/images/meme3.png" alt="">
 </div>
 </div>
+<script src="js/menu.js"></script>
+
 {% endblock %}

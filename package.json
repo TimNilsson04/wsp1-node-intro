@@ -4,14 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-      "start": "nodemon -e njk app.js"
+    "start": "nodemon -e njk app.js & npm run scss",
+    "scss": "sass --watch scss:public/css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "sass": "^1.57.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
